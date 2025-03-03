@@ -1,0 +1,145 @@
+@import "./vars";
+
+* {
+    font-family: $main_font, sans-serif;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            color: $black;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+main {
+    min-height: 80vh;
+    padding: 2rem 1rem 2rem;
+}
+
+h1, h2, h3, h4, h5, ul, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+p {
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    all: unset;
+}
+
+li {
+    list-style-type: none;
+}
+
+input, select, textarea {
+    font-size: $regular;
+    padding: 8px;
+    margin: 4px 0;
+}
+
+.btn-wrap {
+    display: flex;
+}
+
+.btn {
+    width: 100%;
+    min-width: 100%;
+    padding: 8px;
+    color: $white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease-in-out .28s;
+
+    &:hover, &[disabled] {
+        border-radius: 40px;
+        opacity: .82;
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+    }
+
+    &.large {
+        min-height: 160px;
+    }
+    &.green {
+        background: $green;
+    }
+    &.blue {
+        background: $blue;
+    }
+    &.black {
+        background: $black;
+    }
+    &.orange {
+        background: $orange;
+    }
+}
+
+.page-width {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.align-right {
+    margin-left: auto;
+}
+
+.error {
+    color: $blue;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/* Loader Aninimation */
+.loader {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    font-size: 75px;
+}
+  
+.spinner {
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 16px solid rgba(145, 216, 189, 0.4);
+    border-top: 16px solid #a2deb7;
+    animation: spin 2s infinite;
+}
+  
+@keyframes spin {
+    100%{
+      transform: rotate(360deg);
+    }
+}
